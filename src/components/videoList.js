@@ -1,19 +1,21 @@
 angular.module('video-player')
 
+.controller('listController', function($scope) {
+
+})
 .directive('videoList', function() {
 
   return {
     // TODO
-    scope: {
-    	videos: '<',
-    	onClick: '<'
-    },
-    controller: function () {
-      this.videos= 'exampleVideoData';
-    },
+    
+    controller: 'listController', 
     controllerAs: 'ctrl',
-    videos: {{ctrl}}.exampleVideoData,
     bindToController: true,
-    template: 'src/templates/videoList.html',    
+    
+    scope: { 
+      videos: '<',
+      onClick: '<'
+    }, 
+    templateUrl: 'src/templates/videoList.html'  
   };
 });
